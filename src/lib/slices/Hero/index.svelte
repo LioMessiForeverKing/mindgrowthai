@@ -84,7 +84,7 @@
 					class="hero__glow hero__glow--one absolute left-1/3 top-0 -z-10 h-2/3 w-2/3 bg-red-700 opacity-0 mix-blend-screen blur-3xl filter md:blur-[120px]"
 				/>
 				<div
-					class="hero__glow hero__glow--two absolute left-0 top-1/3 -z-10 h-2/3 w-2/3 bg-green-600 opacity-0 mix-blend-screen blur-3xl filter md:blur-[120px]"
+					class="hero__glow hero__glow--two absolute left-0 top-1/3 -z-10 h-2/3 w-2/3 bg-blue-600 opacity-0 mix-blend-screen blur-3xl filter md:blur-[120px]"
 				/>
 
 				<PrismicImage class="rounded-lg" field={slice.primary.image} />
