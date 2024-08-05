@@ -41,13 +41,14 @@
 	.demo__heading {
 		opacity: 0;
 		transform-origin: center;
+		font-size: 4rem;
 		text-align: center;
-		font-size: 2rem;
 		margin: 1rem 0;
 	}
 
 	.demo__body {
 		opacity: 0;
+		font-size: 2rem;
 		margin: 1rem 0;
 		text-align: center;
 		color: "white";
@@ -60,7 +61,7 @@
 </style>
 
 <Bounded class="demo" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<div class="demo__heading">
+	<div class="demo__heading" >
 		<PrismicRichText field={slice.primary.heading} />
 	</div>
 	<div class="demo__body">
