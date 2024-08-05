@@ -27,6 +27,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"demo_hero": {
+							"type": "SharedSlice"
+						},
 						"integrations": {
 							"type": "SharedSlice"
 						},

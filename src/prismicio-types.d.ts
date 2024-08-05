@@ -5,6 +5,7 @@ import type * as prismic from '@prismicio/client';
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+	| DemoHeroSlice
 	| IntegrationsSlice
 	| ShowcaseSlice
 	| BentoSlice
@@ -293,6 +294,68 @@ type BentoSliceVariation = BentoSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type BentoSlice = prismic.SharedSlice<'bento', BentoSliceVariation>;
+
+/**
+ * Primary content in *DemoHero → Default → Primary*
+ */
+export interface DemoHeroSliceDefaultPrimary {
+	/**
+	 * Heading field in *DemoHero → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: demo_hero.default.primary.heading
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	heading: prismic.RichTextField;
+
+	/**
+	 * Body field in *DemoHero → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: demo_hero.default.primary.body
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	body: prismic.RichTextField;
+
+	/**
+	 * Demo Video field in *DemoHero → Default → Primary*
+	 *
+	 * - **Field Type**: Embed
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: demo_hero.default.primary.demo_video
+	 * - **Documentation**: https://prismic.io/docs/field#embed
+	 */
+	demo_video: prismic.EmbedField;
+}
+
+/**
+ * Default variation for DemoHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type DemoHeroSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<DemoHeroSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *DemoHero*
+ */
+type DemoHeroSliceVariation = DemoHeroSliceDefault;
+
+/**
+ * DemoHero Shared Slice
+ *
+ * - **API ID**: `demo_hero`
+ * - **Description**: DemoHero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type DemoHeroSlice = prismic.SharedSlice<'demo_hero', DemoHeroSliceVariation>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -709,6 +772,10 @@ declare module '@prismicio/client' {
 			BentoSliceDefaultPrimary,
 			BentoSliceVariation,
 			BentoSliceDefault,
+			DemoHeroSlice,
+			DemoHeroSliceDefaultPrimary,
+			DemoHeroSliceVariation,
+			DemoHeroSliceDefault,
 			HeroSlice,
 			HeroSliceDefaultPrimary,
 			HeroSliceVariation,
