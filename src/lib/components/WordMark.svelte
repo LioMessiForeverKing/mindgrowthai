@@ -1,5 +1,5 @@
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<svg width="100px" height="100px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
 
 <g>
 
